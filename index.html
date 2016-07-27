@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>REPENS	</title>
+		<meta charset="utf-8">
+	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 	<link rel= "stylesheet" href = "css/style.css" title = "style" type = "text/css"/>
+	  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	  	<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div id="main" class="jumbotron text-center main_heading" >
+			<span>
+				<h1 id="main-head">repens</h1>
+			</span>
+			<span class="glyphicon glyphicon-glass"></span>
+		</div>
+		<div class="jumbotron text-center">
+			
+			<nav class="navbar navbar-custom navbar-fixed-bottom" id="navBar">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-targat="#myNavbar">
+							<span class="icon-bar"></span>
+	     					<span class="icon-bar"></span>
+	      					<span class="icon-bar"></span>	
+						</button>
+						<!-- <a class="navbar-brand" href="#">Resume</a> -->
+					</div>
+					<div>
+						<div class="collapse navbar-collapse" id="myNavbar">
+							<ul class="nav navbar-nav navbar-left">
+	      						<li ><a id="home" onclick="hm()">Home</a></li>
+	    					</ul>
+							<ul class="nav navbar-nav">
+								<li><a id="info" onclick="appInfo()">What Is It?</a></li>
+								<li><a id="wrk" onclick="hWorks()">How Does It Work?</a></li>
+								<li><a id="vis" onclick="viz()">Our Vision</a></li>
+								<li><a id="getIt">Get It Now!</a></li>
+							</ul>
+
+							<ul class="nav navbar-nav navbar-right">
+	      						<li>
+									<a href="mailto:xshubhampatelx@gmail.com">
+										<span class="glyphicon glyphicon-envelope"></span>
+									</a>
+								</li>
+	    					</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+
+		 <div id="inBox" class="content page text-center">
+			
+		</div>
+		
+
+		<script type="text/javascript">
+			speed = 350;
+			function appInfo(){
+				var appInfo = "<span class=\"inTextBox\"><br>Imagine being able to meet new and different kinds of people every time you go out for the night. To be able to spontaneously meet and create valuable connections with those you would have never likely to have meet. Imagine feeling more connected to you local community, to go out with those around you and really be part of that community. Repens provides that for you. Using Geo-location, Repens gives you a hyper-augmented reality of what is going on around you. It gives you the ability to know all of the public parties, bar events, or just a gathering right in your palms. </span>";
+
+		        // var speed = 200;
+		        var i = $(this).index();
+		        var inDiv = document.getElementById('inBox');
+		        $('.page').animate({opacity: 0, marginTop:80},speed,function(){
+		        	$('#inBox').empty();
+		        	inDiv.innerHTML = inDiv.innerHTML + appInfo;
+		            $(this).addClass('not-home');
+		            $('.page').eq(i).css('marginTop',30).animate({opacity:1,marginTop: 50},speed).addClass('not-home');
+		        });
+			}
+
+			function hWorks(){
+				var howItWorks = "<span class=\"inTextBox\"><br>Repens is a simple app. All you do is login with Facebook (Don't worry! We wont post anything!). Then just swipe right and it will show a map of all event that are going on. Just tap on one, send a message and you are good to go. If you want to create an event, just hold a tap on the location and it will lead you to the third screen where you can write a little blurb about whats going on and wait for people to respond.</span>";
+
+				// var speed = 200;
+		        var i = $(this).index();
+		        var inDiv = document.getElementById('inBox');
+		        $('.page').animate({opacity: 0, marginTop:80},speed,function(){
+		        	$('#inBox').empty();
+		        	inDiv.innerHTML = inDiv.innerHTML + howItWorks;
+		            $(this).addClass('not-home');
+		            $('.page').eq(i).css('marginTop',30).animate({opacity:1,marginTop: 50},speed).addClass('not-home');
+		        });
+			}
+			function viz(){
+				var vision = "<span class=\"inTextBox\"><br>Our vision is simple. We want to create a new way of socialization. To be able to meet new and interesting people in random spontaneous ways. We want to let people feel like they are part of a community, for them actually know how is living around them and be able to truly interact with them.</span>"
+
+				// var speed = 200;
+		        var i = $(this).index();
+		        var inDiv = document.getElementById('inBox');
+		        $('.page').animate({opacity: 0, marginTop:80},speed,function(){
+		        	$('#inBox').empty();
+		        	inDiv.innerHTML = inDiv.innerHTML + vision;
+		            $(this).addClass('not-home');
+		            $('.page').eq(i).css('marginTop',30).animate({opacity:1,marginTop: 50},speed).addClass('not-home');
+		        });
+			}
+
+			function viz(){
+				var vision = "<span class=\"inTextBox\"><br>Our vision is simple. We want to create a new way of socialization. To be able to meet new and interesting people in random spontaneous ways. We want to let people feel like they are part of a community, for them actually know how is living around them and be able to truly interact with them.</span>"
+
+				// var speed = 200;
+		        var i = $(this).index();
+		        var inDiv = document.getElementById('inBox');
+		        $('.page').animate({opacity: 0, marginTop:80},speed,function(){
+		        	$('#inBox').empty();
+		        	inDiv.innerHTML = inDiv.innerHTML + vision;
+		            $(this).addClass('not-home');
+		            $('.page').eq(i).css('marginTop',30).animate({opacity:1,marginTop: 50},speed).addClass('not-home');
+		        });
+			}
+
+			function hm(){
+
+				var ele = document.getElementById('inBox')
+				if (ele.classList.contains('not-home')) {
+					$('.page').animate({opacity: 0, marginTop:80},speed,function(){
+						$('.page.not-home').removeClass('not-home')
+					});
+					
+				}
+			}								
+
+		</script>
+	</body>
+</html>
