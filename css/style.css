@@ -46,7 +46,9 @@ html, body{
 	position: relative;
 	top: 5%;
 	left: 25%;
-	width: 55%;
+  right: 25%;
+	width: 50%;
+  bottom: 5%;
 	height: auto;
   padding-top:  0%;
   padding-left: 2%;
