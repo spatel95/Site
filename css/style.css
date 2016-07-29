@@ -22,33 +22,38 @@ html, body{
 .page{
 	display:none;
 	opacity: 0;
+
+
 }
 
 .page.not-home{
 	display: inline-block;
 	opacity: 1;
+
 }
 
 .inTextBox{
 	display: inline;
   	font-family: 'Ubuntu', sans-serif;
   	font-size: 1.5em;
+
 }
 
 .content{
 	color: #000000;
+  word-wrap: break-word;
 	background: rgba(255, 255, 255, 0.5);
-
 	position: relative;
 	top: 5%;
 	left: 25%;
-	/*right: -25%;*/
 	width: 55%;
-	height: 25%;
-	box-shadow: 1 2px 3px rgba(0,0,0,.5);
-	word-wrap: break-word;
-	margin-top: 0%;
-	/*margin-left: 10%;*/
+	height: auto;
+  padding-top:  0%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 1%;
+	
+
 }
 /*.blur-box{
 	background-color: #ffffff;
