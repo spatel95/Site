@@ -102,20 +102,6 @@
 		        });
 			}
 
-			function viz(){
-				var vision = "<span class=\"inTextBox\"><br>Our vision is simple. We want to create a new way of socialization. To be able to meet new and interesting people in random spontaneous ways. We want to let people feel like they are part of a community, for them actually know how is living around them and be able to truly interact with them.</span>"
-
-				// var speed = 200;
-		        var i = $(this).index();
-		        var inDiv = document.getElementById('inBox');
-		        $('.page').animate({opacity: 0, marginTop:80},speed,function(){
-		        	$('#inBox').empty();
-		        	inDiv.innerHTML = inDiv.innerHTML + vision;
-		            $(this).addClass('not-home');
-		            $('.page').eq(i).css('marginTop',30).animate({opacity:1,marginTop: 50},speed).addClass('not-home');
-		        });
-			}
-
 			function hm(){
 
 				var ele = document.getElementById('inBox')
