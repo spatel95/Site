@@ -64,6 +64,10 @@ html, body{
 }*/
 .jumbotron{
 	background-color: transparent !important;
+  /* making height 100% to fill each jumbotron
+   to the height of the screen. This will make each jumbotron
+  a nre "page" of the site */
+  height: 100%;
 }
 
 .main_heading{
