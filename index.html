@@ -10,7 +10,7 @@
 	  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	</head>
-	<body>
+	<body data-spy="scroll">
 		<div id="main" class="jumbotron text-center main_heading" >
 			<span>
 				<h1 id="main-head">repens</h1>
@@ -30,15 +30,19 @@
 						<!-- <a class="navbar-brand" href="#">Resume</a> -->
 					</div>
 					<div>
+						<!-- I have added href as wellhere to make it scroll
+								The scrolling works by moving to where ever the href is
+								ie. if you click what is it button, it will move the webpage to that section
+								NOTE: MAKE SURE YOU ADD THE SAME ID AS THAT IN THE NAV BAR!!! -->
 						<div class="collapse navbar-collapse" id="myNavbar">
 							<ul class="nav navbar-nav navbar-left">
-	      						<li ><a id="home" onclick="hm()">Home</a></li>
+	      						<li ><a href="#home_anch" id="home" onclick="hm()">Home</a></li>
 	    					</ul>
 							<ul class="nav navbar-nav">
-								<li><a id="info" onclick="appInfo()">What Is It?</a></li>
-								<li><a id="wrk" onclick="hWorks()">How Does It Work?</a></li>
-								<li><a id="vis" onclick="viz()">Our Vision</a></li>
-								<li><a id="getIt">Get It Now!</a></li>
+								<li><a href="#info_anch" id="info" onclick="appInfo()">What Is It?</a></li>
+								<li><a href="#wrk_anch" id="wrk" onclick="hWorks()">How Does It Work?</a></li>
+								<li><a href="#vis_anch" id="vis" onclick="viz()">Our Vision</a></li>
+								<li><a href="#getIt_anch" id="getIt">Get It Now!</a></li>
 							</ul>
 
 							<ul class="nav navbar-nav navbar-right">
@@ -56,6 +60,10 @@
 
 		 <div id="inBox" class="content page text-center">
 			
+		</div>
+
+		<div id="info_anch" class="jumbotron text-center">
+			<h1>Hello World</h1>
 		</div>
 		
 
@@ -114,5 +122,33 @@
 			}								
 
 		</script>
+
+		<!-- 
+		This is the scrolling animation for the Web
+
+		in the .animate function adjust the (now 300) to what ever (in ms) 
+		to increase or decrease the speed
+
+		NOTE: I need to adjust the regex a bit to make it a bit better
+				IE. if a type a url directly it will open at home and
+				then scroll down
+		-->
+
+		<script type="text/javascript">
+			$(".navbar-nav li a[href^='#']").on('click', function(e) {
+			   // prevent default scroll
+			   e.preventDefault();
+			   var hash = this.hash;
+
+			   // animate
+			   $('html, body').animate({
+			       scrollTop: $(this.hash).offset().top
+			     }, 300, function(){
+			        window.location.hash = hash;
+			     });
+			});
+		</script>
+
+
 	</body>
 </html>
